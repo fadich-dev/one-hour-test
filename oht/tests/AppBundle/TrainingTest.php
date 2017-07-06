@@ -34,7 +34,7 @@ class TrainingTest extends WebTestCase
 
     public function calculateDays($startDate, $trainingCount, $schedule)
     {
-        $curDate = strtotime($startDate);
+        $curDate = strtotime("tomorrow", strtotime($startDate)) - 1;
         $days = 0;
 
         while ($trainingCount) {
